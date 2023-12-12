@@ -46,7 +46,7 @@ export default function App() {
         ) :(
           days.map((day, index) =>
           <View key={index} style={styles.day}>
-            <Text style={styles.temp}>{day.main.temp}</Text>
+            <Text style={styles.temp}>{parseFloat(day.main.temp).toFixed(1)}</Text>
             <Text style={styles.description}>{day.weather[0].main}</Text>
           </View>
           )
